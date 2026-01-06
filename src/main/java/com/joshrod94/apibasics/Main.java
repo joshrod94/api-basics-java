@@ -33,6 +33,13 @@ public class Main {
             if (statusCode == 200) {
                 System.out.println("Request successful. Response body:");
                 System.out.println(response.body());
+                String responseBody = response.body();
+                    if (responseBody.contains("current_user_url")) {
+                        System.out.println("Found key: current_user_url");
+                    } else {
+                        System.out.println("Key not found");
+                    }
+
             } else {
                 System.out.println("Request failed.");
                 System.out.println("Response body:");
