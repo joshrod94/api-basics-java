@@ -1,7 +1,11 @@
 package com.joshrod94.apibasics;
 
+import java.net.http.HttpClient;
+
 public class Main {
     public static void main(String[] args) {
+
+        HttpClient client = HttpClient.newHttpClient();
 
         // Step 1: Create an HTTP client
         // Step 2: Create an HTTP request
