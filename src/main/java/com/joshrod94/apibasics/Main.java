@@ -28,9 +28,17 @@ public class Main {
         // Step 4: Receive the response
         // Step 5: Print the response
 
-        System.out.println("Status code: " + response.statusCode());
-        System.out.println("Response body:");
-        System.out.println(response.body());
+        int statusCode = response.statusCode();
+        System.out.println("Status code: " + statusCode);
+            if (statusCode == 200) {
+                System.out.println("Request successful. Response body:");
+                System.out.println(response.body());
+            } else {
+                System.out.println("Request failed.");
+                System.out.println("Response body:");
+                System.out.println(response.body());
+            }
+
 
     }
 }
